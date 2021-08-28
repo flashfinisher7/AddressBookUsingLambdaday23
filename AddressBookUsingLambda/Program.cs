@@ -1,4 +1,5 @@
 ﻿using System;
+using AddressbookusingLambda;
 
 namespace AddressBookUsingLambda
 {
@@ -15,7 +16,7 @@ namespace AddressBookUsingLambda
             {
 
                 Console.WriteLine("*********************************************************");
-                Console.WriteLine("1.Add member to Contact list \n2.View Members in Contact List\n3.Edit members Contacts list\n4.Delete members Contacts list\n5.Exit");
+                Console.WriteLine("1.Add member to Contact list \n2.View Members in Contact List\n3.Edit members Contacts list\n4.Delete members Contacts list\n5.Search for details\n6.Exit");
                 Console.WriteLine("Enter an option:");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
@@ -32,11 +33,16 @@ namespace AddressBookUsingLambda
                         abd.DeleteDetails();
                         break;
                     case 5:
+                        abd.SearchDetails();
+                        break;
+                    case 6:
                         // to exit from main method
                         Console.WriteLine("Exited");
                         return;
 
+
                 }
+
             }
         }
     }
