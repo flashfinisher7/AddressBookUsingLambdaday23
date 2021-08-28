@@ -16,7 +16,7 @@ namespace AddressBookUsingLambda
             {
 
                 Console.WriteLine("*********************************************************");
-                Console.WriteLine("1.Add member to Contact list \n2.View Members in Contact List\n3.Edit members Contacts list\n4.Delete members Contacts list\n5.Search for details\n6.Exit");
+                Console.WriteLine("1.Add member to Contact list \n2.View Members in Contact List\n3.Edit members Contacts list\n4.Delete members Contacts list\n5.Search for details\n6.View details of city or state\n7.Exit");
                 Console.WriteLine("Enter an option:");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
@@ -36,12 +36,16 @@ namespace AddressBookUsingLambda
                         abd.SearchDetails();
                         break;
                     case 6:
+                        abd.ViewDetailsByStateOrCity();
+                        break;
+                    default:
                         // to exit from main method
                         Console.WriteLine("Exited");
                         return;
 
 
                 }
+
 
             }
         }
